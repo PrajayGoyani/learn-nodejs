@@ -1,0 +1,20 @@
+// mathUtils.test.js
+
+const sum = require('./mathUtils');
+
+describe('MathUtils', () => {
+  test('should correctly add two numbers', () => {
+    const result = sum(2, 3);
+    expect(result).toBe(5);
+  });
+
+  test('should handle negative numbers', () => {
+    const result = sum(-4, 8);
+    expect(result).toBe(4);
+  });
+
+  test('should return NaN if one or both arguments are not numbers', () => {
+    const result = sum('2', 3);
+    expect(result).toBeNaN();
+  });
+});

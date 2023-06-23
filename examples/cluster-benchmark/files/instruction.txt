@@ -1,0 +1,25 @@
+
+node server.js
+ab -n 1000 -c 100 http://localhost:8000/
+
+
+This command tells Apache Bench to send 1000 requests (-n 1000) with a
+concurrency level of 100 (-c 100) to the specified URL.
+
+Observe the benchmark results, which will include information about throughput,
+latency, and other performance metrics.
+
+By following these steps, you will be able to run a benchmark test on your Node.js
+server using clustering. Remember to adjust the values in the Apache Bench command
+(-n and -c) to match the desired number of requests and concurrency level for your test.
+Additionally, you can modify the server implementation in server.js to include more complex
+routes or logic specific to your application.
+
+Note: Use ab.exe in this folder
+
+
+• ref
+ - (https://httpd.apache.org/download.cgi).
+
+ yarn init
+ yarn add express

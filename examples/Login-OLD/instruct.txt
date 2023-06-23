@@ -1,0 +1,3 @@
+
+yarn add bcrypt body-parser express express-session jsonwebtoken nodemon
+

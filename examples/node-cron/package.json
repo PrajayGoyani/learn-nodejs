@@ -1,0 +1,9 @@
+{
+  "name": "node-cron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-cron": "^3.0.2"
+  }
+}

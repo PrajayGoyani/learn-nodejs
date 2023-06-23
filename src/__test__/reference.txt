@@ -1,0 +1,16 @@
+
+
+ - https://stackoverflow.com/questions/16802030/whats-the-difference-between-tests-and-specs
+
+
+
+ testing is an automated way of verifying the correctness of your code
+ specification encourages the mindset where you are defining 'what' the software does.
+
+
+ For Mocha:
+    Run npm install --save-dev mocha
+    Create a test script in your package.json file, like "test": "mocha"
+ For Jest:
+    Run npm install --save-dev jest.
+    Create a test script in your package.json file, like "test": "jest"

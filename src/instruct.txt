@@ -1,0 +1,127 @@
+yarn add express express-session mongoose body-parser bcrypt ejs
+
+login-register-app
+├── app.js
+├── controllers
+│   └── authController.js
+├── models
+│   └── User.js
+├── routes
+│   └── authRoutes.js
+├── views
+│   ├── dashboard.ejs
+│   ├── login.ejs
+│   └── register.ejs
+├── public
+│   ├── css
+│   │   └── style.css
+│   └── js
+│       └── script.js
+└── README.md
+
+login-register-app
+├── app.js
+├── config
+│   ├── db.js
+│   └── session.js
+├── controllers
+│   ├── authController.js
+│   └── dashboardController.js
+├── middleware
+│   └── authMiddleware.js
+├── models
+│   ├── User.js
+│   └── Feature.js
+├── helpers
+│   └── validationHelper.js
+├── views
+│   ├── dashboard.ejs
+│   ├── login.ejs
+│   └── register.ejs
+├── public
+│   ├── css
+│   │   └── style.css
+│   └── js
+│       └── script.js
+└── README.md
+
+login-register-app
+├── app.js
+├── config
+│   ├── db.js
+│   └── session.js
+├── controllers
+│   ├── authController.js
+│   ├── dashboardController.js
+│   └── emailsController.js
+├── middleware
+│   └── authMiddleware.js
+├── models
+│   ├── User.js
+│   ├── Feature.js
+│   └── Email.js
+├── helpers
+│   └── validationHelper.js
+├── views
+│   ├── dashboard.ejs
+│   ├── login.ejs
+│   ├── register.ejs
+│   └── emails
+│       ├── emailTemplate1.ejs
+│       └── emailTemplate2.ejs
+├── public
+│   ├── css
+│   │   └── style.css
+│   └── js
+│       └── script.js
+└── README.md
+
+// Api Endpoints
+app/
+├─ controllers/
+│  ├─ authController.js
+│  ├─ userController.js
+│  └─ ...
+├─ middlewares/
+│  ├─ authMiddleware.js
+│  └─ ...
+├─ models/
+│  ├─ User.js
+│  ├─ Product.js
+│  └─ ...
+├─ routes/
+│  ├─ authRoutes.js
+│  ├─ userRoutes.js
+│  └─ ...
+├─ app.js
+└─ index.js
+
+// Curent Structure (14-06-2023)
+├───public
+│   ├───css
+│   ├───images
+│   └───js
+├───src
+│   ├───config
+│   ├───controllers
+│   │   └───api
+│   ├───helpers
+│   ├───middleware
+│   ├───migrations
+│   ├───models
+│   ├───routes
+│   ├───seeders
+│   ├───services
+│   ├───views
+│   ├───__test__
+│   │   ├───controllers
+│   │   │   └───api
+│   │   └───services
+│   ├─── app.js
+│   ├─── run-migrations.js
+│   └─── run-seeders.js
+├─── .env
+├─── .gitignore
+├─── index.js
+├─── package.json
+└─── README.md

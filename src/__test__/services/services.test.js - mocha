@@ -1,0 +1,23 @@
+// mathUtils.test.js
+
+const sum = require('./mathUtils');
+const assert = require('assert');
+
+describe('MathUtils', function() {
+  describe('sum', function() {
+    it('should correctly add two numbers', function() {
+      const result = sum(2, 3);
+      assert.strictEqual(result, 5);
+    });
+
+    it('should handle negative numbers', function() {
+      const result = sum(-4, 8);
+      assert.strictEqual(result, 4);
+    });
+
+    it('should return NaN if one or both arguments are not numbers', function() {
+      const result = sum('2', 3);
+      assert.ok(Number.isNaN(result));
+    });
+  });
+});
