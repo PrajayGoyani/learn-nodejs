@@ -22,5 +22,12 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PrajayGoyani/nodejs-learning.git",
+  "author": "PrajayGoyani <prajay.goyani@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.1"
 }

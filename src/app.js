@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
 const sessionMiddleware = require('./config/session');
+const rateLimiter = require('./middleware/throttel');
 const bodyParser = require('body-parser');
 const path = require('node:path');
 
@@ -16,6 +17,9 @@ connectDB();
 
 // Set up session middleware
 app.use(sessionMiddleware);
+
+// Apply rate limiter middleware to all routes
+app.use(rateLimiter);
 
 // Set up body-parser middleware
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
@@ -32,6 +36,14 @@ app.use('/', authRoutes);
 // Define API routes
 const apiRoutes = require('./routes/api');
 app.use('/api', apiRoutes);
+
+
+// Example route
+app.get('/api/data', (req, res) => {
+  // Your route logic here
+  res.json({ message: 'Success' });
+});
+
 
 module.exports = app; // Export the app instance
 
