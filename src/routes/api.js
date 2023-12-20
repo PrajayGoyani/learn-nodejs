@@ -3,6 +3,7 @@ const { validateToken } = require('../middleware/tokenMiddleware');
 const authController = require('../controllers/api/authController');
 const postController = require('../controllers/api/postController');
 const fileUploadController = require('../controllers/api/fileUploadController');
+const multer  = require('multer');
 const upload = multer({ dest: 'public/uploads/' });
 
 const router = express.Router();

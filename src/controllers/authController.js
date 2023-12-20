@@ -15,20 +15,20 @@ const authController = {
     },
 
     postLogin: async (req, res) => {
-        const {email, password} = req.body;
+        const { email, password } = req.body;
 
         try {
-            const user = await User.findOne({email});
+            const user = await User.findOne({ email });
 
             if (!user) {
-                return res.render('login-register', {error: 'Invalid email or password'});
+                return res.render('login-register', { error: 'Invalid email or password' });
             }
 
             const passwordMatch = await bcrypt.compare(password, user.password);
             console.log(passwordMatch);
 
             if (!passwordMatch) {
-                return res.render('login-register', {error: 'Invalid email or password'});
+                return res.render('login-register', { error: 'Invalid email or password' });
             }
 
             req.session.isLoggedIn = true;
@@ -36,7 +36,7 @@ const authController = {
             res.redirect('/dashboard');
         } catch (error) {
             console.error(error);
-            res.render('login-register', {error: 'An error occurred'});
+            res.render('login-register', { error: 'An error occurred' });
         }
     },
 
@@ -49,10 +49,10 @@ const authController = {
     },
 
     postRegister: async (req, res) => {
-        const {firstName, lastName, email, password} = req.body;
+        const { firstName, lastName, email, password } = req.body;
 
         try {
-            const existingUser = await User.findOne({email});
+            const existingUser = await User.findOne({ email });
 
             if (existingUser) {
                 throw 'Email already registered';
@@ -81,7 +81,7 @@ const authController = {
 
             await newUser.save();
 
-            res.render('login-register', {success: "Registration successful! You can now log in."});
+            res.render('login-register', { success: "Registration successful! You can now log in." });
         } catch (error) {
             console.log(error);
             res.render('login-register', {
@@ -102,10 +102,10 @@ const authController = {
                 return res.redirect('/login'); // Redirect to login if user data is not found
             }
 
-            res.render('dashboard', {user});
+            res.render('dashboard', { user });
         } catch (error) {
             console.error(error);
-            res.render('login-register', {error: 'An error occurred'});
+            res.render('login-register', { error: 'An error occurred' });
         }
     },
 
