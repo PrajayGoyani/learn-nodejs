@@ -33,23 +33,21 @@ app.set('views', __dirname + '/views');
 const authRoutes = require('./routes/auth');
 app.use('/', authRoutes);
 
-// Define API routes
-const apiRoutes = require('./routes/api');
-app.use('/api', apiRoutes);
-
-
 // Example route
 app.get('/api/data', (req, res) => {
   // Your route logic here
-  res.json({ message: 'Success' });
+  res.json({ message: 'Success', sessionID: req.sessionID });
 });
 
+// Define API routes
+const apiRoutes = require('./routes/api');
+app.use('/api', apiRoutes);
 
 module.exports = app; // Export the app instance
 
 
 // body parser
-// app.use(cors({
-// 	origin: '*'
-// }));
-// app.use(responseTime());
+/* app.use(cors({
+	origin: '*'
+}));
+app.use(responseTime()); */

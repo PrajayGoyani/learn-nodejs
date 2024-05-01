@@ -12,11 +12,11 @@ const router = express.Router();
 router.post('/login', authController.login);
 router.post('/register', authController.register);
 
-// File Upload
-router.post('/upload', upload.single('file'), fileUploadController.uploadFile);
-
 // Protected routes
 router.use(validateToken); // Middleware to validate token for all protected routes
+
+// File Upload
+router.post('/upload', upload.single('file'), fileUploadController.uploadFile);
 
 router.post('/post/add', postController.addPost);
 router.patch('/post/update', postController.updatePost);
