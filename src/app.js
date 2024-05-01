@@ -1,5 +1,5 @@
 // app.js
-require("@vercel/analytics").inject()
+require("@vercel/analytics/server").track('Server Started.')
 require('dotenv').config();
 const express = require('express');
 const app = express();
